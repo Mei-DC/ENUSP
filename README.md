@@ -1,55 +1,32 @@
 # ENUSP
 
-**Explicit Decoupling of Environment, User, and Position for Generalizable Gesture Recognition**
+### Explicit Decoupling of Environment, User, and Position for Generalizable Gesture Recognition
 
-Dachuan Mei, Yongtao Ma, Bobo Wang, Chenglong Tian, and Lele Yin
+**Project page for the ENUSP manuscript · Under review**
 
-[中文说明](README.zh-CN.md) · [Request the code](CODE_ACCESS.md) · [Handwritten undertaking](RESEARCH_UNDERTAKING.md)
+ENUSP is a framework for millimeter-wave radar gesture recognition across unseen
+environments, users, and positions. Its Purify-then-Align strategy combines
+local–global spatiotemporal encoding, independent feature gating, soft subspace
+orthogonalization, and three domain-adversarial branches with adaptive linear
+balancing.
 
-ENUSP studies mmWave gesture recognition across unseen environments, users, and
-positions. Its Purify-then-Align strategy combines a local–global spatiotemporal
-encoder, independent feature gates, soft subspace orthogonalization, and three
-gradient-reversal branches with adaptive linear balancing.
+## Publication and code availability
 
-This repository is the public project and code-access page. The implementation
-is distributed by email for research use. It covers the seven-class ENUSP method
-and the strict environment–user–position split.
+The manuscript is currently under review and has not yet been formally published.
+This repository provides a project overview during the review process. Code
+access instructions and supporting materials will be announced here after
+formal publication. No source code or application materials are released at
+this stage.
 
-## Obtain the implementation
+## Contact
 
-1. Read the [access conditions](CODE_ACCESS.md).
-2. Copy the [research-use undertaking](RESEARCH_UNDERTAKING.md) **by hand**, complete
-   the applicant information, and add your handwritten signature and date.
-3. Email a legible scan or photograph to **[meidachuan@tju.edu.cn](mailto:meidachuan@tju.edu.cn)**.
-   Use the subject `ENUSP Code Request — Name — Institution` and briefly describe
-   your research purpose.
-4. The ENUSP code package will be sent to the requesting email address **within
-   15 calendar days of receipt of a complete handwritten undertaking**.
+**Dachuan Mei**  
+Email: [meidachuan@tju.edu.cn](mailto:meidachuan@tju.edu.cn)
 
-Send applications by email rather than posting signed documents in GitHub issues.
-The package contains the model, data loader, training and evaluation entry points,
-configuration, and usage instructions. Obtain the underlying radar dataset
-separately from its original provider.
+## 中文说明
 
-## Method and usage
+本仓库为 ENUSP 论文的项目说明页，介绍面向毫米波雷达手势识别的环境、用户与位置
+显式解耦方法。目前论文处于审稿阶段，尚未正式发表。本阶段仅提供项目介绍；
+代码获取方式、申请材料及相关使用说明将在论文正式发表后于本页面更新。
 
-- [Model and training details](docs/METHOD.md)
-- [Dataset layout and fixed split](docs/DATA.md)
-- [Running the code after receiving the package](docs/RUNNING.md)
-
-The source package is a compact implementation of the documented method. Its
-implementation notes record the configuration and differences from historical
-experiment scripts. The cleaned package has not been retrained to establish the
-accuracy reported in the manuscript.
-
-## Citation and contact
-
-Please cite the ENUSP manuscript when using this work. Author and title metadata
-are provided in [CITATION.cff](CITATION.cff); publication metadata will be added
-when confirmed.
-
-For code requests and technical correspondence: **Dachuan Mei**,
-**meidachuan@tju.edu.cn**.
-
-Access is subject to the [research-use conditions](CODE_ACCESS.md). A public
-project page does not grant unrestricted use or redistribution of the code.
+联系邮箱：**meidachuan@tju.edu.cn**。
