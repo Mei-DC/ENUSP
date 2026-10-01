@@ -1,32 +1,48 @@
 # ENUSP
 
-### Explicit Decoupling of Environment, User, and Position for Generalizable Gesture Recognition
+## Generalizable Gesture Recognition Using Adversarial Regularization under Environment, User, and Position Variations
 
-**Project page for the ENUSP manuscript · Under review**
+Dachuan Mei, Yongtao Ma, Bobo Wang, Chenglong Tian, and Lele Yin  
+Tianjin University
 
-ENUSP is a framework for millimeter-wave radar gesture recognition across unseen
-environments, users, and positions. Its Purify-then-Align strategy combines
-local–global spatiotemporal encoding, independent feature gating, soft subspace
-orthogonalization, and three domain-adversarial branches with adaptive linear
-balancing.
+ENUSP is a framework for millimeter-wave (mmWave) radar gesture recognition
+across changes in environment, user, and position. It uses Dynamic Range-Angle
+Image (DRAI) sequences to learn gesture representations under coupled domain
+shifts.
 
-## Publication and code availability
+## Method overview
 
-The manuscript is currently under review and has not yet been formally published.
-This repository provides a project overview during the review process. Code
-access instructions and supporting materials will be announced here after
-formal publication. No source code or application materials are released at
-this stage.
+ENUSP follows a **Purify-then-Align (PtA)** strategy with four components:
+
+- **Local-global encoding.** A 3D-CNN captures local spatiotemporal patterns,
+  while a lightweight Transformer models longer-range temporal dependencies.
+- **Independent feature gating.** Separate gates weight the local and global
+  feature streams before fusion.
+- **Multi-output projection and cosine regularization.** A shared projection
+  produces one classifier-facing output and three auxiliary outputs. A
+  sample-wise absolute-cosine penalty reduces their directional overlap.
+- **Axis-specific adversarial regularization.** Three gradient-reversal branches
+  provide environment-, user-, and position-specific training signals. Adaptive
+  linear balancing adjusts their relative contributions using EMA-smoothed
+  domain losses.
+
+The gesture classifier uses only the classifier-facing output at inference.
+The auxiliary discriminators are used during training.
+
+## Project updates
+
+This page provides an overview of ENUSP. Additional project materials and code
+access information will be added here.
 
 ## Contact
 
 **Dachuan Mei**  
 Email: [meidachuan@tju.edu.cn](mailto:meidachuan@tju.edu.cn)
 
-## 中文说明
+## 中文简介
 
-本仓库为 ENUSP 论文的项目说明页，介绍面向毫米波雷达手势识别的环境、用户与位置
-显式解耦方法。目前论文处于审稿阶段，尚未正式发表。本阶段仅提供项目介绍；
-代码获取方式、申请材料及相关使用说明将在论文正式发表后于本页面更新。
+ENUSP 面向环境、用户和位置变化下的毫米波雷达手势识别，以动态距离-角度图序列为输入，
+结合局部与全局时空编码、独立门控融合、共享多输出投影、逐样本余弦正则化和三路域对抗训练。
+手势分类器在推理时仅使用面向分类的输出，辅助判别器用于训练阶段。
 
-联系邮箱：**meidachuan@tju.edu.cn**。
+本页面先提供项目简介，后续将逐步补充相关材料和代码获取说明。
